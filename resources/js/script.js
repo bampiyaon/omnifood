@@ -98,4 +98,18 @@ $(document).ready(function() {
         }
       );
 
+      /* Mobile navigation */
+      $('.js--nav-icon').click(function() {
+        var nav = $('.js--main-nav')
+        var icon = $('.js--nav-icon ion-icon')
+
+        nav.slideToggle(200); //how fast the animation
+
+        if (icon[0].name == 'menu-outline') {
+            icon[0].name = 'close-outline'
+         } else if (icon[0].name == 'close-outline') {
+          icon[0].name = 'menu-outline'
+      }
+      });
+
 });
